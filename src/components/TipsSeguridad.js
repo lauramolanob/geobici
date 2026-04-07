@@ -17,6 +17,7 @@ const TipsSeguridad = () => {
   };
 
   return (
+
     <View style={mt3}>
       <View style={[row, jcbetween, paddingapp, mb3]}>
         <Text style={h2}>Tips de seguridad</Text>
@@ -26,7 +27,7 @@ const TipsSeguridad = () => {
         {tipsData.map((tip) => (
           <TouchableOpacity key={tip.id} style={[card, { width: width * 0.5, marginRight: 15 }]} onPress={() => setTipSeleccionado(tip)}>
             <Image source={tip.imagen} style={{ width: '100%', height: 100 }} />
-            <View style={{ padding: 12 }}>
+            <View style={{ padding: 15}}>
               <Text style={[body, bold]} numberOfLines={1}>{tip.titulo}</Text>
               <Text style={[caption, mt1]} numberOfLines={2}>{tip.descripcion}</Text>
             </View>

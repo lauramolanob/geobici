@@ -44,13 +44,14 @@ function TabNavigator() {
           return <Ionicons name={iconName} size={size} color={color} />;
         },
         tabBarActiveTintColor: theme.colors.black,
-        tabBarInactiveTintColor: theme.colors.mediumGray,
+        tabBarInactiveTintColor: theme.colors.mediumgray,
         headerShown: false,
         tabBarStyle: { 
-          height: 90, 
-          paddingBottom: 30, 
-          backgroundColor: theme.colors.white,
-          borderTopColor: theme.colors.border 
+          height: 50, 
+          paddingBottom: 20,
+          position: absolute,
+          bottom: 0,
+          backgroundColor: theme.colors.blue,
         },
       })}
     >

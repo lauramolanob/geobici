@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
   },
   deleteText: { 
     textAlign: 'center', 
-    textDecorationLine: 'underline' 
+    textDecorationLine: 'underline',
+    color: '#ff0000'
   },
   modalInner: { 
     padding: 30, 

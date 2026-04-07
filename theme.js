@@ -9,11 +9,13 @@ export const theme = {
     lightgray: '#f5f5f5',
     border: '#eeeeee',
     overlay: 'rgba(0,0,0,0.85)',
+    blue: '#406DFB',
   }
 };
 
 export const bs = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#FFFFFF' },
+  container: { flex: 1, backgroundColor: '#F6F6F4' },
+  containerHome: { flex: 1, backgroundColor: '#F6F6F4' },
   row: { flexDirection: 'row', alignItems: 'center' },
   jcbetween: { justifyContent: 'space-between' },
   paddingapp: { paddingHorizontal: 25 },
@@ -32,9 +34,9 @@ export const bs = StyleSheet.create({
   mb3: { marginBottom: 15 }, 
   mb4: { marginBottom: 20 }, 
   mb5: { marginBottom: 30 },
-  btnprimary: { backgroundColor: '#000', padding: 18, borderRadius: 15, alignItems: 'center' },
+  btnprimary: { backgroundColor: '#406DFB', padding: 18, borderRadius: 15, alignItems: 'center' },
   btnprimarytext: { color: '#FFF', fontWeight: 'bold', fontSize: 16 },
-  btnsecondary: { backgroundColor: '#f5f5f5', padding: 18, borderRadius: 15, alignItems: 'center', borderWidth: 1, borderColor: '#eee' },
+  btnsecondary: { backgroundColor: '#fff', padding: 18, borderRadius: 15, alignItems: 'center', borderWidth: 1, borderColor: '#cccccc' },
   btnsecondarytext: { color: '#000', fontWeight: 'bold' },
   card: { backgroundColor: '#FFF', borderRadius: 20, borderWidth: 1, borderColor: '#eee', overflow: 'hidden' },
   modaloverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.8)', justifyContent: 'center', alignItems: 'center', padding: 25 },

@@ -1,32 +1,66 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { theme, bs } from '../../theme'; 
 import TipsSeguridad from '../components/TipsSeguridad'; 
 import PreviewReportes from '../components/PreviewReportes';
 
 const Inicio = ({ navigation }) => {
   return (
-    <ScrollView style={bs.container} showsVerticalScrollIndicator={false}>
-      <View style={[bs.paddingapp, { paddingTop: 80 }]}>
+    <ScrollView style={bs.containerHome} showsVerticalScrollIndicator={false}>
+      <View style={[bs.paddingapp, { paddingTop: 60 }]}>
         <Text style={bs.h1}>Bienvenida, Paola</Text>
         <Text style={[bs.body, bs.mt1]}>¿A dónde pedaleamos hoy?</Text>
       </View>
 
       <View style={[bs.row, bs.jcbetween, bs.paddingapp, bs.mt5]}>
-        <TouchableOpacity style={styles.accesoBtn} onPress={() => navigation.navigate('Rutas')}>
-          <Ionicons name="play-circle-outline" size={26} color="black" />
-          <Text style={[bs.caption, bs.bold, bs.mt1]}>Rutas</Text>
+        <TouchableOpacity 
+          style={styles.btnWrapper} 
+          onPress={() => navigation.navigate('Rutas')}
+          activeOpacity={0.8}
+        >
+          <LinearGradient
+            colors={['#406DFB', '#091f67']}
+            start={{ x: 1, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.accesoBtn}
+          >
+            <Ionicons name="play-circle-outline" size={26} color="#FFFFFF" />
+            <Text style={styles.btnText}>Rutas</Text>
+          </LinearGradient>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.accesoBtn} onPress={() => navigation.navigate('MiMovil')}>
-          <Ionicons name="phone-portrait-outline" size={26} color="black" />
-          <Text style={[bs.caption, bs.bold, bs.mt1]}>Móvil</Text>
+        <TouchableOpacity 
+          style={styles.btnWrapper} 
+          onPress={() => navigation.navigate('MiMovil')}
+          activeOpacity={0.8}
+        >
+          <LinearGradient
+            colors={['#406DFB', '#091f67']}
+            start={{ x: 1, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.accesoBtn}
+          >
+            <Ionicons name="phone-portrait-outline" size={26} color="#FFFFFF" />
+            <Text style={styles.btnText}>Móvil</Text>
+          </LinearGradient>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.accesoBtn} onPress={() => navigation.navigate('Planes')}>
-          <Ionicons name="ribbon-outline" size={26} color="black" />
-          <Text style={[bs.caption, bs.bold, bs.mt1]}>Planes</Text>
+        <TouchableOpacity 
+          style={styles.btnWrapper} 
+          onPress={() => navigation.navigate('Planes')}
+          activeOpacity={0.8}
+        >
+          <LinearGradient
+            colors={['#406DFB', '#091f67']}
+            start={{ x: 1, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.accesoBtn}
+          >
+            <Ionicons name="ribbon-outline" size={26} color="#FFFFFF" />
+            <Text style={styles.btnText}>Planes</Text>
+          </LinearGradient>
         </TouchableOpacity>
       </View>
 
@@ -45,14 +79,29 @@ const Inicio = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  btnWrapper: {
+    width: '30%',
+  },
   accesoBtn: { 
-    width: '30%', 
-    backgroundColor: '#f5f5f5', 
     paddingVertical: 18, 
     borderRadius: 15, 
     alignItems: 'center', 
-    borderWidth: 1, 
-    borderColor: '#eee' 
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 8,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    elevation: 10,
+  },
+  btnText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginTop: 8,
+    color: '#FFFFFF',
+    textAlign: 'center',
   }
 });
 

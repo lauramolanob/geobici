@@ -115,7 +115,10 @@ const styles = StyleSheet.create({
   searchInput: { 
     flex: 1, 
     fontSize: 14, 
-    color: theme.colors.black 
+    color: theme.colors.black, 
+    backgroundColor: theme.colors.white,
+    borderRadius: 5,
+    paddingHorizontal: 14
   },
   filterSection: { 
     height: 100 
@@ -154,7 +157,7 @@ const styles = StyleSheet.create({
     position: 'absolute', 
     bottom: 30, 
     right: 25, 
-    backgroundColor: theme.colors.black, 
+    backgroundColor: theme.colors.blue, 
     width: 64, 
     height: 64, 
     borderRadius: 32, 
