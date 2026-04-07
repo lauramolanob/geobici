@@ -19,6 +19,8 @@ import MiHistorial from './src/screens/MiHistorial';
 import Planes from './src/screens/Planes';
 import Ayuda from './src/screens/Ayuda';
 
+import Text from './src/components/CustomText'
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -38,20 +40,24 @@ function TabNavigator() {
         tabBarIcon: ({ color, size }) => {
           let iconName;
           if (route.name === 'Inicio') iconName = 'home-outline';
-          else if (route.name === 'Rutas') iconName = 'bicycle-outline';
+          else if (route.name === 'Rutas') iconName = 'map-outline';
           else if (route.name === 'Reportes') iconName = 'warning-outline';
           else if (route.name === 'Perfil') iconName = 'person-outline';
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: theme.colors.black,
-        tabBarInactiveTintColor: theme.colors.mediumgray,
+        tabBarActiveTintColor: theme.colors.white,
+        tabBarInactiveTintColor: theme.colors.darkblue,
         headerShown: false,
         tabBarStyle: { 
-          height: 50, 
-          paddingBottom: 20,
-          position: absolute,
-          bottom: 0,
+          paddingBottom: 10,
+          paddingTop: 5,
+          width: '90%',
+          borderRadius: 50,
+          bottom: 35,
           backgroundColor: theme.colors.blue,
+          color: '#fff',
+          position: 'relative',
+          marginHorizontal: 'auto',
         },
       })}
     >

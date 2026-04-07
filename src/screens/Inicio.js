@@ -21,7 +21,7 @@ const Inicio = ({ navigation }) => {
           activeOpacity={0.8}
         >
           <LinearGradient
-            colors={['#406DFB', '#091f67']}
+            colors={['#406DFB', '#406DFB']}
             start={{ x: 1, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.accesoBtn}
@@ -37,13 +37,13 @@ const Inicio = ({ navigation }) => {
           activeOpacity={0.8}
         >
           <LinearGradient
-            colors={['#406DFB', '#091f67']}
+            colors={['#406DFB', '#406DFB']}
             start={{ x: 1, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.accesoBtn}
           >
-            <Ionicons name="phone-portrait-outline" size={26} color="#FFFFFF" />
-            <Text style={styles.btnText}>Móvil</Text>
+            <Ionicons name="bicycle-outline" size={26} color="#FFFFFF" />
+            <Text style={styles.btnText}>Mi Bici</Text>
           </LinearGradient>
         </TouchableOpacity>
         
@@ -53,7 +53,7 @@ const Inicio = ({ navigation }) => {
           activeOpacity={0.8}
         >
           <LinearGradient
-            colors={['#406DFB', '#091f67']}
+            colors={['#406DFB', '#406DFB']}
             start={{ x: 1, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.accesoBtn}

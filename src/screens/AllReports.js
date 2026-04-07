@@ -139,8 +139,8 @@ const styles = StyleSheet.create({
     marginRight: 8 
   },
   pillActive: { 
-    backgroundColor: theme.colors.black, 
-    borderColor: theme.colors.black 
+    backgroundColor: theme.colors.blue, 
+    borderColor: theme.colors.white 
   },
   pillText: { 
     fontSize: 12, 
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   fab: { 
     position: 'absolute', 
-    bottom: 30, 
+    bottom: 55, 
     right: 25, 
     backgroundColor: theme.colors.blue, 
     width: 64, 

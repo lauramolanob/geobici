@@ -5,7 +5,7 @@ import { theme, bs } from '../../theme';
 
 const MiMovil = ({ navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
-  const { container, paddingapp, row, h2, body, bold, caption, mt1, mb1, mb2, mb3, btnprimary, btnprimarytext, modaloverlay, modalcontent } = bs;
+  const { container, paddingapp, row, h2, body, bold, caption, mt1, mb1, mb2, mb3, btnprimary, btnprimarytext, modaloverlay, modalcontent, accesorios } = bs;
   
   const fotosLocales = [
     require('../../assets/MiPerfil/bici1.jpg'),
@@ -53,10 +53,10 @@ const MiMovil = ({ navigation }) => {
           <View>
             <Text style={[caption, bold, styles.uppercaseMb10]}>Accesorios registrados</Text>
             <View style={styles.chipContainer}>
-              {['Casco negro', 'Luces LED', 'Candado', 'Guantes'].map((item, i) => (
+              {['Casco negro', 'Luces LED', 'Candado', 'Guantes', 'Ciclómetro'].map((item, i) => (
                 <View key={i} style={styles.chip}>
                   <Ionicons name="checkmark-circle" size={14} color={theme.colors.black} style={styles.mr5} />
-                  <Text style={[caption, bold]}>{item}</Text>
+                  <Text style={[accesorios, bold]}>{item}</Text>
                 </View>
               ))}
             </View>
@@ -123,19 +123,20 @@ const styles = StyleSheet.create({
   },
   chipContainer: { 
     flexDirection: 'row', 
-    flexWrap: 'wrap' 
+    flexWrap: 'wrap',
+
   },
   chip: { 
     flexDirection: 'row', 
     alignItems: 'center', 
-    backgroundColor: theme.colors.lightgray, 
+    backgroundColor: theme.colors.green, 
     paddingHorizontal: 12, 
     paddingVertical: 8, 
     borderRadius: 20, 
     marginRight: 8, 
     marginBottom: 8, 
     borderWidth: 1, 
-    borderColor: theme.colors.border 
+    borderColor: theme.colors.white, 
   },
   mr5: { 
     marginRight: 5 

@@ -4,6 +4,7 @@ import MapView from 'react-native-maps';
 import { Ionicons } from '@expo/vector-icons';
 import { theme, bs } from '../../theme';
 
+
 const MisRutas = () => {
   const [modalSOS, setModalSOS] = useState(false);
   const [modalLlamando, setModalLlamando] = useState(false);
@@ -11,7 +12,7 @@ const MisRutas = () => {
   const [modalFinRuta, setModalFinRuta] = useState(false);
   const [contador, setContador] = useState(30);
   const [enRuta, setEnRuta] = useState(false);
-  const { container, h2, body, mt1, mt2, mt3, mb2, mb4, modaloverlay, modalcontent, btnprimary, btnprimarytext, btnsecondary, btnsecondarytext } = bs;
+  const { container, h2, body, mt1, mt2, mt3, mb2, mb4, modaloverlay, modalcontent, btnprimary, btnprimarytext, btnsecondary, btnemergency, btnsecondarytext } = bs;
 
   useEffect(() => {
     let intervalo;
@@ -42,13 +43,13 @@ const MisRutas = () => {
         showsUserLocation={true}/>
 
       <TouchableOpacity 
-        style={[styles.btnRuta, enRuta ? styles.bgGray : styles.bgBlack]} onPress={toggleRuta}>
-        <Ionicons name={enRuta ? "stop" : "play"} size={24} color="white" style={styles.mr10} />
-        <Text style={styles.textRuta}>{enRuta ? "Finalizar ruta" : "Iniciar ruta"}</Text>
+        style={[styles.btnRuta, enRuta ? styles.bgGreen : styles.bgBlue]} onPress={toggleRuta}>
+        <Ionicons name={enRuta ? "stop" : "play"} size={22} color="white"  />
+        <Text style={styles.textRuta}>{enRuta ? "Finalizar" : "Iniciar"}</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.btnSos} onPress={() => { setContador(30); setModalSOS(true); }}>
-        <Ionicons name="megaphone" size={32} color="white" />
+        <Ionicons name="megaphone" size={22} color="white" />
         <Text style={styles.textSos}>SOS</Text>
       </TouchableOpacity>
 
@@ -62,7 +63,7 @@ const MisRutas = () => {
             </View>
 
             <TouchableOpacity 
-              style={[btnsecondary, styles.w100Dark]} 
+              style={[btnemergency]} 
               onPress={() => { setModalSOS(false); setModalLlamando(true); }}>
               <Text style={styles.textWhiteBold}>Llamar ahora (123)</Text>
             </TouchableOpacity>
@@ -100,14 +101,17 @@ const MisRutas = () => {
 const styles = StyleSheet.create({
   btnRuta: { 
     position: 'absolute', 
-    bottom: 40, 
-    alignSelf: 'center', 
-    flexDirection: 'row', 
+    bottom: 60, 
+    right: 25, 
+    backgroundColor: theme.colors.red, 
+    width: 80, 
+    height: 80, 
+    borderRadius: 50, 
+    justifyContent: 'center', 
     alignItems: 'center', 
-    paddingVertical: 18, 
-    paddingHorizontal: 35, 
-    borderRadius: 30, 
-    elevation: 6 
+    elevation: 8, 
+    borderWidth: 2, 
+    borderColor: 'white'
   },
   bgBlack: { 
     backgroundColor: theme.colors.black 
@@ -115,8 +119,11 @@ const styles = StyleSheet.create({
   bgGray: { 
     backgroundColor: theme.colors.mediumgray 
   },
-  mr10: { 
-    marginRight: 10 
+  bgBlue: { 
+    backgroundColor: theme.colors.blue 
+  },
+  bgGreen: { 
+    backgroundColor: theme.colors.green 
   },
   textRuta: { 
     color: 'white', 
@@ -125,16 +132,16 @@ const styles = StyleSheet.create({
   },
   btnSos: { 
     position: 'absolute', 
-    bottom: 120, 
+    bottom: 150, 
     right: 25, 
-    backgroundColor: theme.colors.darkgray, 
-    width: 100, 
-    height: 100, 
+    backgroundColor: theme.colors.red, 
+    width: 80, 
+    height: 80, 
     borderRadius: 50, 
     justifyContent: 'center', 
     alignItems: 'center', 
     elevation: 8, 
-    borderWidth: 3, 
+    borderWidth: 2, 
     borderColor: 'white' 
   },
   textSos: { 

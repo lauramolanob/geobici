@@ -35,7 +35,7 @@ const Perfil = ({ navigation }) => {
           
             <Ionicons name={item.icon} size={22} color={theme.colors.black} />
             <Text style={[body, styles.flex1ml15]}>{item.nombre}</Text>
-            <Ionicons name="chevron-forward" size={20} color={theme.colors.border} />
+            <Ionicons name="chevron-forward" size={20} color={theme.colors.black} />
           </TouchableOpacity>
         )}
       />
@@ -46,7 +46,7 @@ const Perfil = ({ navigation }) => {
           <Text style={[body, bold, styles.ml10Gray]}>Cerrar sesión</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={mt3} onPress={() => setModalEliminar(true)}>
+        <TouchableOpacity style={[mt3, mb4]} onPress={() => setModalEliminar(true)}>
           <Text style={[caption, styles.deleteText]}>Eliminar mi cuenta permanentemente</Text>
         </TouchableOpacity>
       </View>
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     alignItems: 'center', 
     paddingVertical: 18, 
     borderBottomWidth: 1, 
-    borderBottomColor: theme.colors.border 
+    borderBottomColor: theme.colors.border,
   },
   flex1ml15: { 
     flex: 1, 
